@@ -1,0 +1,184 @@
+/* =========================================
+   1. GLOBAL & BACKGROUNDS
+   ========================================= */
+.root {
+    -fx-font-family: 'Segoe UI', 'Helvetica', sans-serif;
+}
+
+.root-bg {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #020617,
+            #0f172a,
+            #020617
+    );
+}
+
+/* =========================================
+   2. TYPOGRAPHY
+   ========================================= */
+
+/* --- Main Landing Page Text --- */
+.brand-logo {
+    -fx-text-fill: #38bdf8; /* Light Blue */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 2px;
+    -fx-opacity: 0.9;
+}
+
+.hero-title {
+    -fx-text-fill: white;
+    -fx-font-size: 48px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(56, 189, 248, 0.3), 20, 0.4, 0, 0);
+}
+
+.hero-description {
+    -fx-text-fill: #94a3b8; /* Slate gray */
+    -fx-font-size: 18px;
+    -fx-line-spacing: 5px;
+}
+
+/* --- Question & Result Page Text --- */
+.headline {
+    -fx-text-fill: #e5e7eb;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.subtitle {
+    -fx-text-fill: #e5e7eb;
+    -fx-font-size: 14px;
+}
+
+.explanation {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+}
+
+.percent {
+    -fx-text-fill: #e5e7eb;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* =========================================
+   3. CARDS & CONTAINERS
+   ========================================= */
+.card {
+    -fx-background-color: rgba(30, 41, 59, 0.7); /* Semi-transparent slate */
+    -fx-background-radius: 18;
+    -fx-padding: 30;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 20, 0.1, 0, 8);
+    -fx-border-color: rgba(255,255,255,0.05);
+    -fx-border-radius: 18;
+    -fx-border-width: 1;
+}
+
+/* =========================================
+   4. BUTTONS
+   ========================================= */
+
+/* --- Standard Button --- */
+.primary-btn {
+    -fx-background-color: linear-gradient(to right, #38bdf8, #6366f1);
+    -fx-text-fill: #020617;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 24;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.primary-btn:hover {
+    -fx-effect: dropshadow(gaussian, rgba(99,102,241,0.6), 15, 0.3, 0, 0);
+}
+
+/* --- Large Hero Button --- */
+.primary-btn-large {
+    -fx-background-color: linear-gradient(to right, #38bdf8, #6366f1);
+    -fx-text-fill: #0f172a;
+    -fx-font-size: 18px;
+    -fx-font-weight: 800;
+    -fx-padding: 16 48;
+    -fx-background-radius: 100; /* Pill shape */
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(99,102,241,0.4), 10, 0, 0, 4);
+}
+
+.primary-btn-large:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(56, 189, 248, 0.6), 20, 0.2, 0, 0);
+}
+
+.primary-btn-large:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* =========================================
+   5. PROGRESS BAR (FIXED)
+   ========================================= */
+.progress-bar {
+    -fx-pref-height: 16;
+    -fx-background-radius: 10;
+    -fx-opacity: 1;
+}
+
+/* The empty track behind the bar */
+.progress-bar .track {
+    -fx-background-color: rgba(255,255,255,0.08);
+    -fx-background-radius: 10;
+    -fx-background-insets: 0;
+}
+
+/* The actual filled bar - Gradient applied here to avoid errors */
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #38bdf8, #6366f1);
+    -fx-background-radius: 10;
+    -fx-background-insets: 0;
+}
+
+.progress-bar:indeterminate {
+    -fx-opacity: 0;
+}
+
+/* =========================================
+   6. QUESTION SCREEN SPECIFIC
+   ========================================= */
+
+/* The interactive option tiles */
+.option-tile {
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-text-fill: #e2e8f0;
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 15 25;
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s;
+}
+
+.option-tile:hover {
+    -fx-background-color: rgba(56, 189, 248, 0.1); /* Slight blue tint */
+    -fx-border-color: #38bdf8; /* Blue border */
+    -fx-effect: dropshadow(gaussian, rgba(56, 189, 248, 0.25), 10, 0, 0, 0);
+    -fx-translate-x: 5; /* Slide right slightly on hover */
+}
+
+/* The card container for the question */
+.question-card {
+    -fx-background-color: rgba(15, 23, 42, 0.6); /* Darker, transparent */
+    -fx-background-radius: 20;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 30, 0, 0, 10);
+    -fx-padding: 40;
+    -fx-min-width: 500;
+}

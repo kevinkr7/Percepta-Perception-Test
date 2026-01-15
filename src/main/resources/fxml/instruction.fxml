@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.percepta.controller.InstructionController"
+           styleClass="root-bg">
+
+    <VBox alignment="CENTER">
+        <padding>
+            <Insets top="20" bottom="20" left="20" right="20"/>
+        </padding>
+
+        <VBox styleClass="card"
+              maxWidth="600"
+              alignment="TOP_CENTER"
+              spacing="25">
+
+            <VBox alignment="CENTER" spacing="5">
+                <Label text="GUIDE" styleClass="brand-logo"/>
+                <Label text="Before You Begin"
+                       styleClass="headline"
+                       style="-fx-font-size: 32px;"/>
+            </VBox>
+
+            <Separator opacity="0.1" maxWidth="400"/>
+
+            <VBox spacing="15" maxWidth="500" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets top="10" bottom="20" left="0" right="0"/>
+                </padding>
+
+                <Label text="• There are no right or wrong answers."
+                       styleClass="subtitle"
+                       style="-fx-font-size: 16px; -fx-text-fill: #e2e8f0;"/>
+
+                <Label text="• Answer honestly based on your first instinct."
+                       styleClass="subtitle"
+                       style="-fx-font-size: 16px; -fx-text-fill: #e2e8f0;"/>
+
+                <Label text="• The assessment takes about 2 minutes to complete."
+                       styleClass="subtitle"
+                       style="-fx-font-size: 16px; -fx-text-fill: #e2e8f0;"/>
+            </VBox>
+
+            <Label text="We will analyze your responses to determine which cognitive perception style you naturally lean towards."
+                   wrapText="true"
+                   maxWidth="500"
+                   styleClass="explanation"
+                   style="-fx-text-alignment: CENTER;"/>
+
+            <Button text="Start Assessment"
+                    styleClass="primary-btn-large"
+                    onAction="#onBegin"/>
+
+        </VBox>
+    </VBox>
+
+</StackPane>
