@@ -127,6 +127,6 @@ Suitable for:
 
 ## 👨‍💻 Author
 
-Kevin K R
+*Kevin K R*\
 Computer Science & Engineering
 Java | JavaFX | UI/UX | Problem Solving
